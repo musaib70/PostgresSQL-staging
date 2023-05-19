@@ -19,7 +19,8 @@ import { table } from "console";
     
   });
   
-  
+
+
   export type Todo = InferModel<typeof todoTable>;
   export type NewTodo = InferModel<typeof todoTable, "insert">; // insert type
   
