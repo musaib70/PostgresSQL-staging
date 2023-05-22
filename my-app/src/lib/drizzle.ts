@@ -11,11 +11,15 @@ import {
   import { sql } from "@vercel/postgres";
 import { unique } from "next/dist/build/utils";
 import { table } from "console";
+import { devNull } from "os";
+import { create } from "domain";
+
+
   
   export const todoTable = pgTable("todo", {
     id: serial("id").primaryKey().notNull(),
     task: varchar("task", {length:50}).notNull(),
-    description: varchar("description", {length: 500}),
+    description: varchar("description", {length: 50}),
     
   });
   
