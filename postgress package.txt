@@ -1,0 +1,23 @@
+Vercel Postgres using NextJs
+
+npx create-next-app@latest
+
+npm i -g vercel@latest
+
+vercel
+
+Now open Dashboard in Browser
+Open the Project Page you just created
+Select the Storage Tab on the Project Page and Create a Vercel Postgres Database
+
+vercel env pull .env.development.local
+
+npm i @vercel/postgres
+
+npm run dev
+
+
+import { NextRequest, NextResponse } from "next/server";
+import { db, todoTable } from "@/lib/drizzle";
+import { Message } from "postcss";
+
